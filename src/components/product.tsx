@@ -19,8 +19,8 @@ const Product:React.FC<IProduct> = ({
     description
 }) => {
   return (
-    <div className='bg-gray-100 flex flex-col gap-y-5 my-10 rounded-2xl pb-10'>
-        <Image src={icon} alt={title} width={200} height={200} className='w-full rounded-tl-2xl rounded-tr-2xl'/>
+    <div className='bg-gray-100 flex flex-col gap-y-5 my-10 rounded-2xl pb-10 shadow-md'>
+        <Image src={icon} alt={title} width={200} height={300} className='w-full rounded-tl-2xl rounded-tr-2xl' style={{maxHeight: '300px'}}/>
         <div className='px-5'>
         <h1 className='font-bold'>{title}</h1>
         <p>{description}</p>

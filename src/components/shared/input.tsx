@@ -7,13 +7,13 @@ interface IInput extends InputHTMLAttributes<HTMLInputElement> {
     rightIcon?: string,
     containerStyle?: string
     showPassoword?: () => void,
-    setValue: Dispatch<SetStateAction<string>>
 
 }
 
 const Input: React.FC<IInput> = ({
+    type,
     value,
-    setValue,
+    onChange,
     rightIcon,
     placeholder,
     showPassoword,
@@ -26,16 +26,16 @@ const Input: React.FC<IInput> = ({
     return (
         <div className={`relative ${containerStyle}`}>
         <input 
-                type={showPassoword ? 'password' : 'text'}
+                type={type}
                 value={value}
                 placeholder={placeholder}
                 className = {`focus:outline-none ${className}`}
-                onChange={(e) => setValue(e.target.value)}
+                onChange={onChange}
                 {...props}
         />
             {rightIcon && 
-            <div className='absolute inset-y-0 end-0 flex items-center pe-4'>
-                <Image src={rightIcon} alt={rightIcon} width={20} height={20}/>
+            <div className='absolute inset-y-0 end-0 flex items-center pe-4' >
+                <Image src={rightIcon} alt={rightIcon} width={20} height={20} onClick={showPassoword}/>
             </div>
             }
         </div>
