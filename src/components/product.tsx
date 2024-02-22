@@ -5,8 +5,9 @@ import Image from "next/image";
 
 interface IProduct{
     date: string,
-    icon: string
+    icon: string,
     title: string,
+    textStyle?: string,
     description: string,
 }
 
@@ -14,6 +15,7 @@ const Product:React.FC<IProduct> = ({
     date,
     icon,
     title, 
+    textStyle,
     description
 }) => {
   return (
@@ -24,7 +26,7 @@ const Product:React.FC<IProduct> = ({
         <p>{description}</p>
         <div className='flex justify-between'>
         <p>{`Posted date: ${date}`}</p>
-        <Link href='/singleProduct' className='font-bold'>Get more</Link>
+        <Link href='/singleProduct' className={`font-bold ${textStyle}`}>Get more</Link>
         </div>
     </div>
  </div>

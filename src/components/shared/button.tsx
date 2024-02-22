@@ -2,12 +2,12 @@ import Image from 'next/image';
 import React from 'react'
 
 interface IButton{
-    style: string,
-    title: string,
-    icon?: string,
-    onClick?: () => {}
-    textStyle?: string,
-    type: 'button' | 'submit',
+    style: string
+    title: string
+    icon?: string
+    textStyle?: string
+    onClick?: () => void
+    type: 'button' | 'submit'
 }
 
 const Button: React.FC<IButton> = ({

@@ -1,5 +1,6 @@
-import { INFOS } from "@/constants";
+import { INFOS } from "@/src/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer: React.FC<any> = () => {
     return (
@@ -8,7 +9,9 @@ const Footer: React.FC<any> = () => {
             {INFOS.map((item, index) => (
                 <ul key={index} className="flex flex-col justify-between">
                     {item.map((item, index) => (
-                        <li key={index} className="hover:text-white font-thin cursor-pointer">{item}</li>
+                        <li key={index} className="hover:text-white font-thin cursor-pointer">
+                            <Link href='/'>{item}</Link>
+                        </li>
                     ))}
                 </ul>
             ))}
