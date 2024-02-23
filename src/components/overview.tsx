@@ -14,7 +14,7 @@ return (
     title='Shop'
     type='button'
     textStyle='text-gray-50'
-    style='flex flex-row justify-between items-center bg-gray-400 px-6 py-2 rounded-3xl cursor-pointer mt-5 hover:font-bold hover:bg-gray-500'
+    style='flex flex-row justify-between items-center bg-gray-400 px-6 py-2 rounded-3xl cursor-pointer my-5 hover:font-bold hover:bg-gray-500'
     />
 </>
   )

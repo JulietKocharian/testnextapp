@@ -1,70 +1,80 @@
 "use client"
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 // import { cookies } from 'next/headers';
 import Cookies from 'js-cookie';
 import Image from 'next/image';
 
 import Button from '@/src/components/shared/button';
 import Input from '@/src/components/shared/input';
+import { useRouter } from 'next/navigation'
 
 import { UserAPI } from '../API/user/user';
 
 
 interface IAuth {
-    isAuth?: boolean
-    _auth: () => void
+  isAuth?: boolean
+  _auth: () => void
+  _toggleModals: () => void
 }
 
-const Auth: React.FC<IAuth> = ({isAuth, _auth}) =>  {
-
+const Auth: React.FC<IAuth> = ({ isAuth, _auth, _toggleModals }) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false);
+  const router = useRouter()
+  const [userInfos, setUserInfos] = useState({ email: '', password: '', confirmPassord: '' });
 
-  const [userInfos, setUserInfos] = useState({email : '', password : '', confirmPassord : ''});
 
-
-    const getData = async () => {
-      const data = await UserAPI.login(userInfos.email, userInfos.password);
-      // setUserInfo(data)
+   const getData = async () => {
+    if (userInfos.email === '' || userInfos.password === '') {
+      throw new Error('Invalid user data');
+    } else {
+      const data = isAuth ? await UserAPI.signIn(userInfos.email, userInfos.password) : 
+      await UserAPI.signUp(userInfos.email, userInfos.password);
+      if(data.token) {
+        router.push('/profile');
+        window.location.pathname = "/profile";
+      }
       Cookies.set(`token`, `${data.token}`);
-      console.log((data));
-    }
+    
+      console.log('data ', data);
+      _auth();
+    } 
+  }
 
-  
   return (
-        <div className='bg-gray-50 py-5 px-10 min-w-[300px] min-h-[200px] rounded-lg shadow-md flex gap-y-10 justify-cente flex-col' onClick={(event) => event.stopPropagation()}>
+    <div className='bg-gray-50 py-5 px-10 min-w-[300px] min-h-[200px] rounded-lg shadow-md flex gap-y-10 justify-cente flex-col' onClick={(event) => event.stopPropagation()}>
 
-    <Image src='/assets/images/logo.svg' width={60} height={60} alt='logo' /><h2 className='text-lg font-semibold'>{!isAuth ? 'Sign Up' : 'Sign In'}</h2><div className='flex justify-center flex-col gap-y-10'>
+      <Image src='/assets/images/logo.svg' width={60} height={60} alt='logo' /><h2 className='text-lg font-semibold'>{!isAuth ? 'Sign Up' : 'Sign In'}</h2><div className='flex justify-center flex-col gap-y-10'>
+        <Input
+          required
+          type="email"
+          value={userInfos.email}
+          containerStyle='mx-auto'
+          placeholder="Enter your email"
+          onChange={(e) => setUserInfos({ ...userInfos, email: e.target.value })}
+          className='px-10 py-5  text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 text-sm ' />
+        <Input
+          value={userInfos.password}
+          containerStyle='mx-auto'
+          placeholder="Enter your password"
+          rightIcon='/assets/images/hide.svg'
+          type={showPassword ? 'text' : 'password'}
+          showPassoword={() => setShowPassword((prev) => !prev)}
+          onChange={(e) => setUserInfos({ ...userInfos, password: e.target.value })}
+          className='px-10 py-5  text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 text-sm ' />
+        {!isAuth &&
           <Input
-              required
-              type="email"
-              value={userInfos.email}
-              containerStyle='mx-auto'
-              placeholder="Enter your email"
-              onChange={(e) => setUserInfos({...userInfos, email: e.target.value})}
-              className='px-10 py-5  text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 text-sm ' />
-          <Input
-              value={userInfos.password}
-              containerStyle='mx-auto'
-              placeholder="Enter your password"
-              rightIcon='/assets/images/hide.svg'
-              type={showPassword ? 'text' : 'password'}
-              showPassoword={() => setShowPassword((prev) => !prev )}
-              onChange={(e) => setUserInfos({...userInfos, password: e.target.value})}
-              className='px-10 py-5  text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 text-sm ' />
-          {!isAuth &&
-              <Input
-              containerStyle='mx-auto'
-              placeholder="Confirm password"
-              value={userInfos.confirmPassord}
-              rightIcon='/assets/images/hide.svg'
-              type={showConfirmPassword ? 'text' : 'password'}
-              showPassoword={() => setShowConfirmPassword((prev) => !prev )}
-              onChange={(e) => setUserInfos({...userInfos, confirmPassord: e.target.value})}
-              className='px-10 py-5  text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 text-sm ' />}
+            containerStyle='mx-auto'
+            placeholder="Confirm password"
+            value={userInfos.confirmPassord}
+            rightIcon='/assets/images/hide.svg'
+            type={showConfirmPassword ? 'text' : 'password'}
+            showPassoword={() => setShowConfirmPassword((prev) => !prev)}
+            onChange={(e) => setUserInfos({ ...userInfos, confirmPassord: e.target.value })}
+            className='px-10 py-5  text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 text-sm ' />}
       </div>
       <div className='flex flex-row justify-end'>
-      <Button
+        <Button
           type='button'
           onClick={getData}
           textStyle='text-black'
@@ -73,12 +83,12 @@ const Auth: React.FC<IAuth> = ({isAuth, _auth}) =>  {
         />
       </div>
       <div className='flex flex-row justify-between'>
-              <p>{isAuth ? 'Not a member yet?' : 'Already a member?'}</p>
-              <p className='cursor-pointer' onClick={_auth}>{isAuth ? 'Sign Up' : 'Sign In'}</p>
+        <p>{isAuth ? 'Not a member yet?' : 'Already a member?'}</p>
+        <p className='cursor-pointer' onClick={_toggleModals}>{ isAuth ? 'Sign Up' : 'Sign In' }</p>
       </div>
     </div>
   )
 }
 
 
-export default Auth;
+export  default  Auth;

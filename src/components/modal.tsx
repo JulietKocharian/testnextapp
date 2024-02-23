@@ -1,6 +1,8 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
 import Auth from './auth';
+import Cookies from "js-cookie";
+import { useRouter } from 'next/navigation'
 
 interface  IModalProps {
   isOpen:boolean
@@ -8,9 +10,12 @@ interface  IModalProps {
 }
 
 const Modal: React.FC<IModalProps> = ( {isOpen, setIsOpen}) => {
+
   const [isAuth, setIsAuth] = useState<boolean>(true);
-  // const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [show, setShow] = useState<boolean>(false);
+
+  const router = useRouter()
+
+  const token = Cookies.get('token')
 
 
   useEffect(() => {
@@ -20,18 +25,27 @@ const Modal: React.FC<IModalProps> = ( {isOpen, setIsOpen}) => {
     }
 , [isOpen]);
 
-  const auth = () => {
-    setIsAuth((prev) => !prev);
+const toggleModals = () => {
+  if(isAuth) {
+    setIsAuth(false);
+  }
+  else {
+    setIsAuth(true);
   }
 
-  const closeModal = () => {
-    setIsOpen(false);
-    
+}
+
+  const auth = () => {
+    if(token) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
   }
 
   return (
-      <div className='fixed inset-0 flex items-center justify-center z-0 bg-gray-100 bg-opacity-70' onClick={closeModal}>
-      <Auth isAuth={isAuth} _auth={auth}/>
+      <div className='fixed inset-0 flex items-center justify-center z-0 bg-gray-100 bg-opacity-70' onClick={() => setIsOpen(false)}>
+      <Auth isAuth={isAuth} _auth={auth} _toggleModals={toggleModals}/>
     </div>
     )
 };

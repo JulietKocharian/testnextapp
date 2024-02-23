@@ -12,20 +12,22 @@ const Home: React.FC<any> = () => {
     useEffect(() => {
       const getData = async () => {
         const data = await ProductsAPI.getProducts();
-        setProduct(data);
+        const filteredData = data.filter((item:any) => item.type === "n")
+        setProduct(filteredData);
       }
       getData();
     }, [])
     
-    console.log(product);
 
   return (
   <div className="flex flex-col items-center justify-between">
 
     <Overview/>
     <div className="flex flex-row gap-x-2 mx-5"> 
-     {product.map((product: { id: number; image: string; title: string; description: string; createdAt: string}) => (
+     {product.map((product: { id: string; image: string; title: string; description: string; createdAt: string}) => (
       <Product
+       getMore
+       id={product.id}
        key={product.id}
        title={product.title} 
        textStyle="hover:text-gray-500"

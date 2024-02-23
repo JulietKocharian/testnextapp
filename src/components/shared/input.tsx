@@ -33,7 +33,7 @@ const Input: React.FC<IInput> = ({
                 onChange={onChange}
                 {...props}
         />
-            {rightIcon && 
+            {!!rightIcon && 
             <div className='absolute inset-y-0 end-0 flex items-center pe-4' >
                 <Image src={rightIcon} alt={rightIcon} width={20} height={20} onClick={showPassoword}/>
             </div>
