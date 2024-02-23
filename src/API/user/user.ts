@@ -14,4 +14,18 @@ export class UserAPI {
         const {data} = await publicAPI.post(url, body);
         return data;
     }
+
+    static async sendEmail(email: string) {
+        const url = '/code';
+        const body = {email};
+        const {data} = await publicAPI.post(url, body);
+        return data;
+    }
+
+    static async sendCode(code: number, password: string, email: string) {
+        const url = '/code';
+        const body = {code, password, email};
+        const {data} = await publicAPI.put(url, body);
+        return data;
+    }
 }

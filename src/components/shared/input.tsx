@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React, { Dispatch, InputHTMLAttributes, SetStateAction, useState } from 'react'
 
 interface IInput extends InputHTMLAttributes<HTMLInputElement> {
-    value: string,
+    value: string | number,
     rightIcon?: string,
     containerStyle?: string
     showPassoword?: () => void,
