@@ -15,8 +15,8 @@ const Contact: React.FC<any> = () => {
         <Input
           type="text"
           value={value}
-          setValue={setValue}
           placeholder="Search..."
+          onChange={(e) => setValue}
           containerStyle='mx-auto my-10'
           rightIcon="/assets/images/search.svg"
           className='px-10 py-5  text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm '

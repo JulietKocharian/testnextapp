@@ -1,4 +1,4 @@
-import { publicAPI } from "..";
+import { publicAPI } from "@/src/API/index";
 
 export class UserAPI {
     static async signIn(email: string, password: string) {

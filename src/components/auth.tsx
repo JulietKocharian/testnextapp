@@ -1,14 +1,13 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-// import { cookies } from 'next/headers';
+import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
 import Image from 'next/image';
 
+import ForgotPassword from '@/src/components/forgotPassword';
 import Button from '@/src/components/shared/button';
 import Input from '@/src/components/shared/input';
-import { useRouter } from 'next/navigation'
-import { UserAPI } from '../API/user/user';
-import ForgotPassword from './forgotPassword';
+import { UserAPI } from '@/src/API/user/user';
 
 
 

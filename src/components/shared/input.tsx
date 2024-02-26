@@ -1,6 +1,6 @@
-"use-client"
-import Image from 'next/image'
-import React, { Dispatch, InputHTMLAttributes, SetStateAction, useState } from 'react'
+"use-client";
+import Image from 'next/image';
+import React, { InputHTMLAttributes } from 'react';
 
 interface IInput extends InputHTMLAttributes<HTMLInputElement> {
     value: string | number,
