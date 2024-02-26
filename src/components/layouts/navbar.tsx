@@ -2,18 +2,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React, {useEffect, useState} from 'react';
-import Cookies from 'js-cookie';
 
 
 import { NAV_LINKS } from '@/src/constants';
 import Button from '../shared/button';
-import Modal from '../modal';
+import Modal from '../auth/modal';
 
 
 
 const Navbar: React.FC<any> = () => {
 
-  const token = Cookies.get('token');
+  const token = localStorage.getItem('token');
 
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState('');

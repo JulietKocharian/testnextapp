@@ -1,10 +1,9 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Cookies from 'js-cookie';
 import Image from 'next/image';
 
-import ForgotPassword from '@/src/components/forgotPassword';
+import ForgotPassword from '@/src/components/auth/forgotPassword';
 import Button from '@/src/components/shared/button';
 import Input from '@/src/components/shared/input';
 import { UserAPI } from '@/src/API/user/user';
@@ -38,12 +37,13 @@ const Auth: React.FC<IAuth> = ({ isAuth, _auth, _toggleModals }) => {
         router.push('/profile');
         window.location.pathname = "/profile";
       }
-      Cookies.set(`token`, `${data.token}`);
+      localStorage.setItem(`token`, `${data.token}`);
     
       console.log('data ', data);
       _auth();
     } 
   }
+
 
   return (
 
@@ -82,7 +82,7 @@ const Auth: React.FC<IAuth> = ({ isAuth, _auth, _toggleModals }) => {
             {isAuth && <p className='text-gray-500 cursor-pointer' onClick={() => setForgot(true)}>Forgot password </p>}
             <Button
               type='button'
-              onClick={getData}
+              onClick={() => {try {getData} catch(err) {console.log(err)}}}
               textStyle='text-black'
               title={isAuth ? 'Sign In' : 'Sign Up'}
               style='flex items-center justify-center bg-gray-300 rounded-lg cursor-pointer hover:font-bold p-2' />

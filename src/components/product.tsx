@@ -30,7 +30,7 @@ const Product:React.FC<IProduct> = ({
 }) => {
   return (
     <div className={`bg-gray-100 flex flex-col gap-y-5 mb-5 rounded-2xl pb-10 shadow-md ${containerStyle}`}>
-        <Image src={icon} alt={title} width={200} height={200} className={`w-full rounded-tl-2xl rounded-tr-2xl ${imageStyle}`}/>
+        <Image src={icon} alt={title} width={200} height={200} className={`w-full ${imageStyle}`}/>
         <div className='px-5'>
         <h1 className='font-bold'>{title}</h1>
         <p>{description}</p>

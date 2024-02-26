@@ -1,8 +1,6 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
 import Auth from './auth';
-import Cookies from "js-cookie";
-import { useRouter } from 'next/navigation'
 
 interface  IModalProps {
   isOpen:boolean
@@ -13,9 +11,8 @@ const Modal: React.FC<IModalProps> = ( {isOpen, setIsOpen}) => {
 
   const [isAuth, setIsAuth] = useState<boolean>(true);
 
-  const router = useRouter()
 
-  const token = Cookies.get('token')
+  const token = localStorage.getItem('token');
 
 
   useEffect(() => {

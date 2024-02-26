@@ -1,9 +1,9 @@
 'use client'
 import React, {useState} from "react";
 
-import Input from "./shared/input";
-import Button from "./shared/button";
-import { UserAPI } from "../API/user/user";
+import Input from "../shared/input";
+import Button from "../shared/button";
+import { UserAPI } from "../../API/user/user";
 
 
 const ForgotPassword:React.FC<any> = () => {
