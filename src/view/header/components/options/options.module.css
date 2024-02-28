@@ -1,0 +1,17 @@
+.options {
+    gap: 42px;
+    display: flex;
+}
+.optionContainer {
+    gap: 14px;
+    display: flex;
+    align-items: center;
+    
+}
+.optionText {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--white);
+    font-family: 'Rubik';
+}

@@ -1,0 +1,38 @@
+
+.headerLeftAnimationContainer {
+    left: 8px;
+    position: absolute;
+}
+
+.headerLeftAnimation1 {
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    animation: rotateForever1 5s linear infinite;
+}
+
+@keyframes rotateForever1 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.headerLeftAnimation2 {
+    z-index: 1;
+    left: 0;
+    animation: rotateForever2 5s linear infinite;
+}
+
+@keyframes rotateForever2 {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}

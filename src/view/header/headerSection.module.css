@@ -1,0 +1,32 @@
+@import url('../../styles/variable.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headerMainContainer {
+    top: 0;
+    z-index: 0;
+    height: 100vh;
+    display:flex;
+    padding-inline: 90px;
+    flex-direction: column;
+    background: var(--dark-gray);
+    justify-content: space-between;
+}
+
+.headerWave {
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.headerBackground {
+    top: 0;
+    left: 0;
+    z-index: 0;
+    position: absolute;
+    width: -webkit-fill-available;
+}

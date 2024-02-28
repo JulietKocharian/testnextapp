@@ -1,0 +1,9 @@
+.headerDescription {
+    font-size: 40px;
+    font-weight: 300;
+    /* margin-top: 24px; */
+    line-height: 50px;
+    color: var(--white);
+    /* padding-left: 11px; */
+    font-family: 'PTSans';
+}

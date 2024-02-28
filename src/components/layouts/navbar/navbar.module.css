@@ -1,0 +1,66 @@
+.navbar {
+    z-index: 1;
+    display: flex;
+    padding-top: 27px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbarMainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 105px;
+
+}
+
+.menuIcon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.languagesContainer {
+    gap: 10px;
+    display: flex;
+}
+
+.languageContainer {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5s;
+    border-radius: 100%;
+    align-items: center;
+    line-height: 23.7px;
+    font-family: "Rubik";
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: inherit;
+}
+
+.languageCircle {
+    border: none;
+    color: var(--white-opacity);
+}
+
+.languageCircleChecked {
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.signInButton {
+    height: 75px;
+    width: 266px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 300;
+    border-style: none;
+    border-radius: 60px;
+    font-family: 'Rubik';
+    line-height: 35.55px;
+    background-color: var(--turquoise);
+}

@@ -1,0 +1,33 @@
+.phenomenaContainer {
+    gap: 25px;
+    z-index: 1;
+    display: flex;
+    /* padding-left: 11px; */
+    align-items: center;
+}
+
+.phenomenaText {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    font-family: 'Rubik';
+    color: var(--white);
+    letter-spacing: 0.15em;
+}
+
+.linesContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.line1{
+    height: 2px;
+    width: 66px; 
+    background-color: var(--white);
+}
+
+.line2{
+    height: 2px;
+    width: 66px; 
+    background-color: var(--turquoise);
+}

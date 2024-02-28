@@ -1,0 +1,23 @@
+.headerOverview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.titleSubtitle {
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleSubtitleOptions {
+    gap: 57px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.titleSubtitleOptionsContainer {
+    gap: 201px;
+    display: flex;
+    flex-direction: column;
+}
