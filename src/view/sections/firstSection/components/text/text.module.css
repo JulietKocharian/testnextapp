@@ -1,0 +1,67 @@
+.text {
+    direction: rtl;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 40px;
+    font-family: 'Rubik';
+}
+
+.textContainer {
+    width: 586px;
+    height: 97px;
+}
+
+@media screen and (max-width: 414px) {
+    .text {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 30px;
+        font-family: 'Rubik';
+    }
+
+    .textContainer {
+        padding-inline: 30px;
+        width: 354px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .text {
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 30px;
+        font-family: 'Rubik';
+    }
+
+    .textContainer {
+        padding-inline: 20px;
+        width: 354px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px){
+    .text {
+        direction: rtl;
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 35px;
+        font-family: 'Rubik';
+    }
+    
+    .textContainer {
+        width: 586px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .textContainer {
+        width: 320px;
+    }
+    .text {
+        line-height: 30px;
+
+    }
+}

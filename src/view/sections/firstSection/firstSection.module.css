@@ -1,0 +1,15 @@
+.container {
+    gap: 148px;
+    display: flex;
+    padding-top: 200px;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+}
+
+.numbersTextContainer {
+    gap: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

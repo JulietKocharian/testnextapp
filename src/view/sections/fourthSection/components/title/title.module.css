@@ -1,0 +1,139 @@
+.container {
+    gap: 14px;
+    width: 790px;
+    display: flex;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 43px;
+    color: var(--white);
+    font-family: 'Rubik';
+}
+
+/* @media screen and (min-width: 414px) and (max-width: 768px) {
+    .title {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 10px;
+        text-align: center;
+    }
+
+    .container {
+        gap: 3px;
+        width: 414px;
+        display: flex;
+        position: relative;
+        padding-inline: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .line {
+        width: 90px;
+    }
+    
+} */
+
+/* 
+ */
+
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        gap: 14px;
+        width: auto;
+    }
+    .title {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 414px) and (max-width: 768px) {
+    .container {
+        gap: 10px;
+        width: auto;
+        padding-inline: 20px;
+    }
+    .title {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 10px;
+        text-align: center;
+    }
+    .line {
+        width: 250px;
+    }
+}
+
+
+ 
+ @media screen and (max-width: 414px) {
+    .title {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .container {
+        gap: 3px;
+        width: 100%;
+        display: flex;
+        position: relative;
+        padding-inline: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .line {
+        width: 90px;
+    }
+} 
+
+/* 
+@media screen and (max-width: 414px) {
+    .title {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 10px;
+        text-align: center;
+    }
+    .container {
+        gap: 3px;
+        width: 90%;
+        display: flex;
+        position: relative;
+        padding-inline: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .line {
+        width: 220px;
+    }
+
+} */
+
+
+@media screen and (max-width: 360px) {
+    .title {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 15px;
+        text-align: center;
+    }
+
+    .container {
+        gap: 3px;
+        width: 100%;
+        display: flex;
+        position: relative;
+        padding-inline: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .line {
+        width: 220px;
+    }
+}

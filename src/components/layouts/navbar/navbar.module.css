@@ -1,5 +1,5 @@
 .navbar {
-    z-index: 1;
+    z-index: 20;
     display: flex;
     padding-top: 27px;
     align-items: center;
@@ -12,7 +12,6 @@
     justify-content: space-between;
     align-items: center;
     gap: 105px;
-
 }
 
 .menuIcon {
@@ -42,20 +41,30 @@
     background-color: inherit;
 }
 
-.languageCircle {
+.languageColorUnchecked {
     border: none;
     color: var(--white-opacity);
 }
 
-.languageCircleChecked {
+.labguageColorUncheckedMenu {
+    border: none;
+    color: rgba(62, 62, 62, 0.2);
+}
+
+.languageCircleCheckedWhite {
     border: 1px solid var(--white);
     color: var(--white);
+}
+
+.languageCircleCheckedBlack {
+    border: 1px solid var(--black);
+    color: var(--black);
 }
 
 .signInButton {
     height: 75px;
     width: 266px;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
     font-weight: 300;
     border-style: none;
@@ -63,4 +72,54 @@
     font-family: 'Rubik';
     line-height: 35.55px;
     background-color: var(--turquoise);
+}
+
+@media only screen and (max-width: 768px) {
+    .signInButton {
+        display: none;
+    }
+
+    .navbarMainContainer {
+        gap: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menuIcon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .languagesContainer {
+        gap: 5px;
+    }
+
+    .languageContainer {
+        border: none;
+        width: 34.35px;
+        height: 34.35px;
+        font-size: 10px;
+        color: var(--white-opacity);
+    }
+
+    .languageColorUnchecked {
+        border: none;
+        color: var(--white-opacity);
+    }
+
+    .labguageColorUncheckedMenu {
+        border: none;
+        color: rgba(62, 62, 62, 0.2);
+    }
+
+    .languageCircleCheckedWhite {
+        border: 1px solid var(--white);
+        color: var(--white);
+    }
+
+    .languageCircleCheckedBlack {
+        border: 1px solid var(--black);
+        color: var(--black);
+    }
 }

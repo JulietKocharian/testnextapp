@@ -1,0 +1,62 @@
+.mainContainer {
+    position: relative;
+    padding-top: 200px;
+}
+
+.titleTextContainer {
+    gap: 48px;
+    display: flex;
+    padding-inline: 80px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.backgroundImageMobile {
+    width: 100%;
+
+    top: -100px;
+    z-index: -1;
+    position: absolute;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .mainContainer {
+        padding-top: 350px;
+    }
+    .titleTextContainer {
+        padding-inline: 0px;
+        align-items: center;
+    }
+    
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .mainContainer{
+        padding-top: 350px;
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 768px) {
+    .mainContainer{
+        padding-top: 400px;
+    }
+    .titleTextContainer {
+        padding-inline: 0px;
+    }
+    
+}
+@media screen and (max-width: 414px) {
+    .mainContainer {
+        padding-top: 100px;
+    }
+    .titleTextContainer {
+        width: 96%;
+        padding-inline: 0px;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 360px) {
+    .mainContainer {
+        padding-top: 30px;
+    }
+}

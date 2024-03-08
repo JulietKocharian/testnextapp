@@ -2,7 +2,7 @@
     gap: 25px;
     z-index: 1;
     display: flex;
-    /* padding-left: 11px; */
+    padding-left: 11px;
     align-items: center;
 }
 
@@ -30,4 +30,13 @@
     height: 2px;
     width: 66px; 
     background-color: var(--turquoise);
+}
+.facebook {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .phenomenaContainer{
+        display: none;
+    }
 }

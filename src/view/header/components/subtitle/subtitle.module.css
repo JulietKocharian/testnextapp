@@ -1,9 +1,53 @@
+.container {
+    padding-top: 10px;
+}
+
 .headerDescription {
     font-size: 40px;
     font-weight: 300;
-    /* margin-top: 24px; */
     line-height: 50px;
     color: var(--white);
-    /* padding-left: 11px; */
+    padding-left: 11px;
     font-family: 'PTSans';
+}
+
+@media screen and (max-width: 768px) {
+    .headerDescription {
+        height: 30px;
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 31px;
+        color: var(--white);
+        padding-left: 11px;
+        font-family: 'PTSans';
+    }
+}
+
+/* @media only screen and (max-width: 534px){
+    .headerDescription {
+        height: 30px;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 31px;
+        color: var(--white);
+        padding-left: 11px;
+        font-family: 'PTSans';
+    }
+} */
+@media screen and (max-width: 414px) {
+    .headerDescription {
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 31px;
+        font-family: 'PTSans';
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .headerDescription {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 31px;
+        font-family: 'PTSans';
+    }
 }

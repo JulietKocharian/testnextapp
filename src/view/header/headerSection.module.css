@@ -1,11 +1,5 @@
 @import url('../../styles/variable.css');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .headerMainContainer {
     top: 0;
     z-index: 0;
@@ -18,15 +12,53 @@
 }
 
 .headerWave {
-    top: 0;
+    left: 0;
     right: 0;
-    z-index: 1;
+    width: 100%;
+    position: absolute;
 }
 
 .headerBackground {
     top: 0;
-    left: 0;
+    right: 0;
+    /* width: 100%; */
     z-index: 0;
     position: absolute;
-    width: -webkit-fill-available;
+}
+
+@media screen and (max-width: 768px) {
+    .headerMainContainer {
+        top: 0;
+        gap: 270px;
+        z-index: 0;
+        height: 100vh;
+        display:flex;
+        padding-inline: 17px;
+        flex-direction: column;
+        justify-content: start;
+        background: var(--dark-gray);
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1320px){
+}
+
+
+@media screen and (max-width: 414px) {
+    .headerMainContainer {
+        top: 0;
+        gap: 270px;
+        z-index: 0;
+        height: 100vh;
+        display:flex;
+        padding-inline: 17px;
+        flex-direction: column;
+        justify-content: start;
+        background: var(--dark-gray);
+    }
+    .headerBackground{
+        top: 0;
+        height: 894px;
+        position: absolute;
+    }
+    
 }

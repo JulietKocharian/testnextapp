@@ -1,0 +1,39 @@
+.imageContainer {
+    top: -850px;
+    position: relative;
+}
+
+.image {
+    z-index: 22;
+    right: 0;
+    /* right: -10px; */
+    position: absolute;
+}
+
+.imageMobile {
+    width: 357px;
+    height: 307px;
+    top: 850px;
+    z-index: 22;
+    position: absolute;
+    animation: rotateForever 5s linear infinite;
+}
+
+@keyframes rotateForever {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .imageMobile {
+        width: 70%;
+    }
+    .image {
+        width: 70%;
+    }
+}

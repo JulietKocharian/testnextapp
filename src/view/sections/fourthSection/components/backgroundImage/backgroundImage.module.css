@@ -1,0 +1,20 @@
+.image {
+    top: 70px;
+    width: 100vw;
+    z-index: -1;
+    position: absolute;
+}
+
+.backgroundImageMobile {
+    top: 250px;
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+}
+
+
+@media screen and (min-width: 414px) and (max-width: 768px) {
+    .image {
+        top: 140px;
+    }
+}

@@ -1,0 +1,56 @@
+.arrowButton {
+    z-index: 1;
+    width: 41px;
+    height: 41px;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 50px;
+    justify-content: center;
+    background-color: var(--turquoise);
+}
+.arrowButton:hover{
+    transition: 0.4s;
+    background-color: var(--yellow);
+    box-shadow:  0px 0px 5px 2px var(--white-opacity);
+}
+
+
+@media only screen and (max-width: 414px){
+    .arrowButton img {
+        width: 21px;
+        height: 21px;
+    }
+    .arrowButton {
+        z-index: 1;
+        width: 41px;
+        height: 41px;
+        border: none;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        border-radius: 50px;
+        justify-content: center;
+        background-color: var(--turquoise);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .arrowButton img {
+        width: 18px;
+        height: 18px;
+    }
+    .arrowButton {
+        z-index: 1;
+        width: 31px;
+        height: 31px;
+        border: none;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        border-radius: 50px;
+        justify-content: center;
+        background-color: var(--turquoise);
+    }
+}

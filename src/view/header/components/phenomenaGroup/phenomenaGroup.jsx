@@ -2,15 +2,15 @@ import React from 'react'
 
 import styles from './phenomena.module.css'
 
-const PhenomenaGroup = () => {
+const PhenomenaGroup = ({textStyle, lineStyle, forMenu, containerStyle}) => {
   return (
-    <div className={styles.phenomenaContainer}>
-        <p className={styles.phenomenaText}>phenomena group</p>
+    <div className={`${styles.phenomenaContainer} ${containerStyle}`}>
+        <p className={`${styles.phenomenaText} ${textStyle}`}>phenomena group</p>
         <div className={styles.linesContainer}>
-            <div className={styles.line1}/>
+            <div className={`${styles.line1} ${lineStyle}`}/>
             <div className={styles.line2}/>
         </div>
-        <img src='../assets/headers/facebook.svg' alt='facebook'/>
+        <img src={`${ forMenu ? '../assets/headers/facebookBlack.svg' : '../assets/headers/facebookWhite.svg'}`} alt='facebook'/>
     </div>
   )
 }

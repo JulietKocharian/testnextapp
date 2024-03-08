@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ArrowButton from '../../../../components/buttons/ArrowButton';
+import ArrowButton from '../../../../components/buttons/ArrowButton/ArrowButton';
 
 import styles from './options.module.css';
 

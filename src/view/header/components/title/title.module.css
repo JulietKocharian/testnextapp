@@ -1,16 +1,107 @@
 .lettersContainer {
     gap: 53px;
     display: flex;
+    max-width: 1069px;
+    width: 100%;
 }
 
 .letterStyle {
     font-weight: 300;
     font-size: 130px;
+    /* font-size: clamp(2.5rem, 1.0074rem + 3.7936vw, 5.625rem); */
     line-height: 150px;
     color: var(--white);
     font-family: 'PTSans';
 }
 
-.zI1{
+.zI1 {
     z-index: 1;
+}
+
+
+
+/* @media only screen and (max-width: 534px) {
+    .letterStyle {
+        bottom: 44px;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 150px;
+        position: relative;
+        color: var(--white);
+        font-family: 'PTSans';
+    }
+
+} */
+
+@media only screen and (min-width: 769px) and (max-width: 1320px) {
+    .letterStyle {
+        font-size: 100px;
+        font-weight: 300;
+        line-height: 100px;
+        position: relative;
+        color: var(--white);
+        font-family: 'PTSans';
+    }
+
+    .lettersContainer {
+        gap: 10px;
+        height: 42px;
+        /* width: 354px; */
+        display: flex;
+        padding-left: 11px;
+    }
+}
+@media only screen  and (max-width: 768px) {
+    .lettersContainer {
+        gap: 15px;
+        height: 42px;
+        /* width: 354px; */
+        display: flex;
+        padding-left: 11px;
+    }
+
+    .letterStyle {
+        bottom: 44px;
+        font-size: 44px;
+        font-weight: 300;
+        line-height: 150px;
+        position: relative;
+        color: var(--white);
+        font-family: 'PTSans';
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+    .letterStyle {
+        font-size: 44px;
+        font-weight: 300;
+        font-family: 'PTSans';
+        line-height: 150px;
+        /* text-align: center; */
+
+    }
+    .lettersContainer {
+        gap: 12px;
+        height: 42px;
+        display: flex;
+        padding-left: 11px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .letterStyle {
+        font-size: 34px;
+        font-weight: 300;
+        font-family: 'PTSans';
+        line-height: 150px;
+
+    }
+    .lettersContainer {
+        gap: 10px;
+        height: 42px;
+        display: flex;
+        padding-left: 11px;
+    }
 }

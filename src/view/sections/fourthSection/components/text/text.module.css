@@ -1,0 +1,137 @@
+.textContainer {
+    padding-left: 100px;
+    padding-right: 550px;
+}
+
+.text {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 60px;
+    text-align: right;
+    color: var(--white);
+    font-family: 'Rubik';
+}
+
+/* 
+@media screen and (min-width: 414px) and (max-width: 768px) {
+    .textContainer {
+        padding-left: 0;
+        padding-right: 0;
+        padding-inline: 10px;
+    }
+
+    .text {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+        font-family: 'Rubik';
+    }
+    
+} */
+
+
+/* 
+
+
+*/
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .textContainer {
+        width: 762px;
+        height: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 50px;
+    }
+    .textContainer {
+        width: 600px;
+        display: flex;
+        height: 655px;
+        padding-inline:20px;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 560px) and (max-width: 768px) {
+    .text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    .textContainer {
+        width: auto;
+        display: flex;
+        /* height: 655px; */
+        max-width: 500px;
+        padding-inline:40px;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 414px) and (max-width: 560px) {
+    .text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .textContainer {
+        width: auto;
+        display: flex;
+        /* height: 655px; */
+        max-width: 500px;
+        padding-inline:15px;
+        justify-content: center;
+    }
+}
+/* 
+ */
+/* @media screen and (max-width: 414px) {
+    .textContainer {
+        padding-left: 0;
+        padding-right: 0;
+        padding-inline: 10px;
+    }
+
+    .text {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 60px;
+        font-family: 'Rubik';
+    }
+
+} */
+
+@media screen and (max-width: 414px) {
+    .text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 50px;
+    }
+
+    .textContainer {
+        width: 90%;
+        padding: 0;
+        height: 655px;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .text {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 50px;
+    }
+
+    .textContainer {
+        padding: 0;
+        width: 90%;
+        height: 655px;
+    }
+}

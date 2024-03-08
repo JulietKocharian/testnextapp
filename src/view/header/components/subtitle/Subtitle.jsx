@@ -4,7 +4,7 @@ import styles from './subtitle.module.css'
 
 const Subtitle = () => {
   return (
-    <div>
+    <div className={styles.container}>
         <p className={styles.headerDescription}>Business Solutions</p>
     </div>
   )

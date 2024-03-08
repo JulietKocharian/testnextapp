@@ -1,11 +1,10 @@
-
 .headerLeftAnimationContainer {
     left: 8px;
     position: absolute;
 }
 
 .headerLeftAnimation1 {
-    left: 0;
+    /* left: 0; */
     z-index: 1;
     position: absolute;
     animation: rotateForever1 5s linear infinite;
@@ -23,7 +22,7 @@
 
 .headerLeftAnimation2 {
     z-index: 1;
-    left: 0;
+    /* left: 0; */
     animation: rotateForever2 5s linear infinite;
 }
 
@@ -34,5 +33,45 @@
 
     to {
         transform: rotate(0deg);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .headerLeftAnimation1, .headerLeftAnimation2{
+        width: 60px;
+        height: 56px;
+    }
+    .headerLeftAnimationContainer {
+        position: absolute;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 820px){
+    .headerLeftAnimationContainer {
+        top: 80px;
+        left: 70px;
+        position: absolute;
+        /* left: 3px; */
+        top: 310px; 
+    }
+    .headerLeftAnimation1, .headerLeftAnimation2{
+        top: -110px;
+        width: 120px;
+        height: 116px;
+        position: absolute;
+    }
+
+}
+
+@media only screen and (min-width: 820px) and (max-width: 1320px){
+    .headerLeftAnimation1, .headerLeftAnimation2{
+        width: 140px;
+        height: 136px;
+        position: absolute;
+    }
+    .headerLeftAnimationContainer {
+        /* top: 280px; */
+        left: 50px;
+        position: absolute;
     }
 }

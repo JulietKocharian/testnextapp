@@ -1,0 +1,36 @@
+.mainContainer {
+    top: 300px;
+    gap: 100px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+.textContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .mainContainer {
+        top: -200px;
+    }
+    
+}
+
+@media screen and (min-width: 414px) and (max-width: 768px) {
+    .mainContainer {
+        top: 200px;
+    }
+    
+}
+@media screen and (max-width: 414px) {
+    .mainContainer {
+        gap: 40px;
+        top: -100px;
+    }
+
+}

@@ -1,0 +1,228 @@
+.mainContainer {
+    gap: 26px;
+    z-index: 21;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rel {
+    position: relative;
+}
+
+.numbersContainer {
+    gap: 110px;
+    display: flex;
+}
+
+.numberStyle {
+    height: 62px;
+}
+
+.input {
+    top: 8px;
+    z-index: 20;
+    height: 2px;
+    width: 1220px;
+    background: radial-gradient(circle at left, rgba(35, 35, 35, 0) 0%, #232323 50%, rgba(35, 35, 35, 0) 100%) !important;
+}
+
+.input1 {
+    background: linear-gradient(to right,
+            rgba(53, 224, 205, 0.23) 0%,
+            rgba(53, 224, 205, 1) 22%,
+            #232323 22%,
+            rgba(35, 35, 35, 0) 100%) !important;
+}
+
+.input2 {
+    background: linear-gradient(to right,
+            rgba(53, 224, 205, 0.23) 0%,
+            rgba(53, 224, 205, 1) 41%,
+            #232323 41%,
+            rgba(35, 35, 35, 0) 100%) !important;
+}
+
+.input3 {
+    background: linear-gradient(to right,
+            rgba(53, 224, 205, 0.23) 0%,
+            rgba(53, 224, 205, 1) 59%,
+            #232323 59%,
+            rgba(35, 35, 35, 0) 100%) !important;
+}
+
+.input4 {
+    background: linear-gradient(to right,
+            rgba(53, 224, 205, 0.23) 0%,
+            rgba(53, 224, 205, 1) 50%,
+            rgba(53, 224, 205, 0.23)100%) !important;
+
+}
+
+
+.line {
+    top: 9px;
+    left: 0;
+    z-index: 0;
+    width: 1220px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    padding-inline: 267px;
+    justify-content: space-between;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+    appearance: none;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    opacity: 0;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    z-index: -1;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: var(--black);
+}
+
+.dotClicked {
+    width: 8px;
+    height: 8px;
+    z-index: -1;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: var(--turquoise);
+    box-shadow: 0px 0px 10px 4px var(--turquoise);
+}
+
+
+/* media queries */
+
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .line {
+        gap: 160px;
+        width: 900px;
+        padding-inline: 0px;
+        justify-content: center;
+    }
+
+    .numbersContainer {
+        gap: 90px;
+        display: flex;
+    }
+
+    .numberStyle {
+        width: 78px;
+        height: 42px;
+    }
+
+    .input {
+        width: 900px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .line {
+        gap: 90px;
+        width: 500px;
+        padding-inline: 0px;
+        justify-content: center;
+    }
+
+    .numbersContainer {
+        gap: 20px;
+        display: flex;
+    }
+
+    .numberStyle {
+        width: 78px;
+        height: 42px;
+    }
+
+    .input {
+        width: 500px;
+    }
+}
+
+/* @media screen and (max-width: 768px) {
+
+}  */
+
+@media screen and (min-width: 415px) and (max-width: 768px) {
+    .line {
+        gap: 80px;
+        width: 400px;
+        padding-inline: 0px;
+        justify-content: center;
+    }
+
+    .numbersContainer {
+        gap: 20px;
+        display: flex;
+    }
+
+    .numberStyle {
+        width: 78px;
+        height: 42px;
+    }
+
+    .input {
+        width: 400px;
+    }
+}
+
+
+@media screen and (max-width: 414px) {
+    .numbersContainer {
+        gap: 28px;
+        display: flex;
+    }
+
+    .numberStyle {
+        width: 60px;
+        height: 32px;
+    }
+
+    .input {
+        width: 360px;
+    }
+
+    .line {
+        gap: 74px;
+        width: 360px;
+        padding-inline: 0px;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    .numbersContainer {
+        gap: 10px;
+        display: flex;
+    }
+
+    .numberStyle {
+        width: 60px;
+        height: 32px;
+    }
+
+    .input {
+        width: 300px;
+    }
+
+    .line {
+        gap: 54px;
+        width: 300px;
+        padding-inline: 0px;
+        justify-content: center;
+    }
+
+}
