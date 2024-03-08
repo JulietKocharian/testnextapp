@@ -12,6 +12,7 @@
 .phoneButton:hover{
     transition: 0.4s;
     box-shadow:  0px 0px 8px 2px var(--turquoise);
+    /*  */
 }
 
 .phoneContainer {
