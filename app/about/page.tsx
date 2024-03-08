@@ -1,8 +1,8 @@
-import Loading from "@/src/components/shared/loading";
+import AboutPage from "@/src/screens/about/about";
 
 const About: React.FC<any> = () => {
     return(
-        <Loading/>
+       <AboutPage/>
     )
 }
 

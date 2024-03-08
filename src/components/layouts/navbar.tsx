@@ -1,6 +1,7 @@
 "use client"
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import React, {useEffect, useState} from 'react';
 
 
@@ -11,18 +12,24 @@ import Modal from '../auth/modal';
 
 
 const Navbar: React.FC<any> = () => {
-
-  const token = localStorage.getItem('token');
-
+  
+  const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState('');
 
 
+  const router = useRouter()
+
   const _openModal = () => {
     if(token) {
+    localStorage.removeItem('token');
+    window.location.pathname = '/home';
+    router.push('/profile');
+    setTitle('Sign In');
     setIsOpen(false);
     } else {
-      setIsOpen(true);
+    setTitle('Sign Out');
+    setIsOpen(true);
     }
   }
   
@@ -45,7 +52,7 @@ const Navbar: React.FC<any> = () => {
         <div className='flex gap-x-20'>
           {NAV_LINKS.map((link: any) => (
             <li key={link.key} className='regular-16 text-black-50 flex-center transition-all hover:font-bold'>
-              <Link href={link.href}>{link.label}</Link>
+              <Link href={link.href}>{ link.label}</Link>
             </li>
           ))}
         </div>

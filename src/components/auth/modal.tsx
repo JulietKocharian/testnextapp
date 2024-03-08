@@ -1,3 +1,4 @@
+"use client"
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
 import Auth from './auth';

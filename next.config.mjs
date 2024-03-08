@@ -2,6 +2,7 @@
 const nextConfig = {
     images: {
         domains: ['192.168.1.18'],
+        // remotePatterns: ['192.168.1.18'],
       },
 };
 
