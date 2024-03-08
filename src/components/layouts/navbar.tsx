@@ -26,6 +26,7 @@ const Navbar: React.FC<any> = () => {
     window.location.pathname = '/home';
     router.push('/profile');
     setTitle('Sign In');
+    // 
     setIsOpen(false);
     } else {
     setTitle('Sign Out');
